@@ -2,24 +2,25 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import Entypo from '@expo/vector-icons/Entypo';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+import EvilIcons from '@expo/vector-icons/EvilIcons';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+
 
 
   return (
-    <Tabs screenOptions={{ headerShown: false,
-      tabBarActiveTintColor:Colors.PRIMARY
-     }}>
-      
+    <Tabs screenOptions={{
+      headerShown: false,
+      tabBarActiveTintColor: Colors.PRIMARY
+    }}>
+
       <Tabs.Screen
         name="home"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo name="home" size={24} color={color} />,
         }}
       />
 
@@ -27,7 +28,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <Ionicons name="person" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Ionicons name="person" size={24} color={color} />,
         }}
       />
 
@@ -35,7 +36,7 @@ export default function TabLayout() {
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={24} color={color} />,
         }}
       />
 

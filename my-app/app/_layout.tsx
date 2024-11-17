@@ -10,7 +10,10 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-
+   useFonts({
+    'outfit':require('./../assets/fonts/Outfit-Regular.ttf'),
+    'outfit-medium':require('./../assets/fonts/Outfit-Medium.ttf')
+   })
 
   return (
     <Stack>

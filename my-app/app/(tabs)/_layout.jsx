@@ -8,12 +8,16 @@ import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
-  return (
-    <Tabs screenOptions={{ headerShown: false }}>
 
+  return (
+    <Tabs screenOptions={{ headerShown: false,
+      tabBarActiveTintColor:Colors.PRIMARY
+     }}>
+      
       <Tabs.Screen
         name="home"
         options={{
@@ -21,6 +25,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
+
       <Tabs.Screen
         name="profile"
         options={{

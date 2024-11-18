@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, FlatList, Image } from 'react-native'
 import React, { useEffect } from 'react'
 // import {db} from "../../configs/FirebaseConfig"
 // import { getDocs,collection,query } from 'firebase/firestore'
@@ -7,12 +7,41 @@ import {data} from "../../constants/Constdata"
 
 export default function Slider() {
 
-    //  console.log("===data===",data)
+     console.log("===data===",data)
 
  
   return (
     <View>
-      <Text>Slider</Text>
+      <Text style={{
+        fontFamily:"outfit-bold",
+        fontSize:20,
+        paddingLeft:20,
+        paddingRight:20,
+        marginBottom:5
+      }}>#Special for you</Text>
+
+     
+<FlatList
+  data={data}
+   horizontal={true}
+   showsHorizontalScrollIndicator={false}
+    style={{
+      paddingLeft:20
+    }}
+  keyExtractor={(item, index) => index.toString()} // Add a unique key for each item
+  renderItem={({ item }) => (
+    <Image
+      source={{ uri: item.imageUrl }}
+      style={{
+        width: 300,
+        height: 160,
+        borderRadius:15,
+        marginRight:15
+      }}
+    />
+  )}
+/>
+
     </View>
   )
 }

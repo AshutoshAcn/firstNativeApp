@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import Header from "../../components/HomeScreens/Header"
-
+import Slider from "../../components/HomeScreens/Slider"
 
 export default function home() {
 
@@ -11,7 +11,7 @@ export default function home() {
         <Header />
 
        {/* Slider */}
-
+       <Slider/>
 
        {/*  Category */}
 

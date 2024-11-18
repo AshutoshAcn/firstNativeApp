@@ -36,6 +36,17 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "firebaseConfig": {
+        "apiKey": "AIzaSyCHGMqQJe6SuvDgdHwzNLokJpO9Zgs51jU",
+        "authDomain": "bussiness-app-c7d0c.firebaseapp.com",
+        "projectId": "bussiness-app-c7d0c",
+        "storageBucket": "bussiness-app-c7d0c.firebasestorage.app",
+        "messagingSenderId": "804117815305",
+        "appId": "1:804117815305:web:08949d6c062538e40098d8",
+        "measurementId": "G-D24TDY09NQ"
+      }
   }
+}
 }

@@ -7,7 +7,7 @@ import {data} from "../../constants/Constdata"
 
 export default function Slider() {
 
-     console.log("===data===",data)
+    //  console.log("===data===",data)
 
  
   return (
@@ -17,7 +17,9 @@ export default function Slider() {
         fontSize:20,
         paddingLeft:20,
         paddingRight:20,
-        marginBottom:5
+        marginBottom:5,
+        paddingTop:5,
+        paddingBottom:5
       }}>#Special for you</Text>
 
      

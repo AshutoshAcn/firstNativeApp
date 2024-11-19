@@ -1,16 +1,15 @@
 import { View, Text, FlatList } from 'react-native'
 import React from 'react'
+import {businessList} from "../../constants/Constdata"
 import { Colors } from '@/constants/Colors'
-import { categories } from "../../constants/Constdata"
-import CategoryItem from "../../components/HomeScreens/CategoryItem"
-export default function Category() {
+import PopularBussinessCard from "../../components/HomeScreens/PopularBussinessCard"
 
-  // console.log("===catgoryyy===",categories)/
+export default function PopularBussiness() {
+//  console.log("===businessList===",businessList)
 
 
   return (
     <View>
-
       <View style={{
         padding: 20,
         display: "flex",
@@ -24,7 +23,7 @@ export default function Category() {
           fontFamily: "outfit-bold",
           display: "flex",
           justifyContent: "space-between"
-        }}>Category
+        }}>PopularBussiness
 
         </Text>
         <Text style={{
@@ -33,19 +32,17 @@ export default function Category() {
         }}>View All</Text>
       </View>
 
-     
-      <FlatList
-        data={categories}
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(item, index) => index.toString()} // Ensure each item has a unique key
+        <FlatList
+        data={businessList}
         horizontal={true}
-        style={{ marginLeft: 20 }}
-        renderItem={({ item, index }) => (
-          <CategoryItem category={item} key={index}
-            onCategoryPress={(category) => console.log(category)}
+        showsHorizontalScrollIndicator={false}
+        renderItem={({item,index}) =>(
+          <PopularBussinessCard
+            business={item}
           />
-        )}
-      />
+           )}
+        />
+
     </View>
   )
 }

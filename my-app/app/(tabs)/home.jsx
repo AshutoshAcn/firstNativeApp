@@ -1,24 +1,31 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import Header from "../../components/HomeScreens/Header"
 import Slider from "../../components/HomeScreens/Slider"
 import Category from "../../components/HomeScreens/Category"
-
+import PopularBussiness from "../../components/HomeScreens/PopularBussiness"
 
 export default function home() {
 
   return (
-    <View >
-       {/* Header */}
-        
-        <Header />
+    <ScrollView >
+      {/*==== Header  === */}
 
-       {/* Slider */}
-       <Slider/>
+      <Header />
 
-       {/*  Category */}
-       <Category />
+      {/*===== Slider====== */}
 
-       {/* Popular Business List */}
-    </View>
+      <Slider />
+
+      {/* ==== Category ====*/}
+
+      <Category />
+
+      {/*==== Popular Business List ==== */}
+
+      <PopularBussiness />
+      <View style={{height:100}}>
+
+      </View>
+    </ScrollView>
   );
 }

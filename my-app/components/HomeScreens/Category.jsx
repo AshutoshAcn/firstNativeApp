@@ -3,8 +3,9 @@ import React from 'react'
 import { Colors } from '@/constants/Colors'
 import { categories } from "../../constants/Constdata"
 import CategoryItem from "../../components/HomeScreens/CategoryItem"
+import { useRouter } from 'expo-router'
 export default function Category() {
-
+  const router = useRouter()
   // console.log("===catgoryyy===",categories)/
 
 
@@ -33,7 +34,7 @@ export default function Category() {
         }}>View All</Text>
       </View>
 
-     
+
       <FlatList
         data={categories}
         showsHorizontalScrollIndicator={false}
@@ -42,7 +43,9 @@ export default function Category() {
         style={{ marginLeft: 20 }}
         renderItem={({ item, index }) => (
           <CategoryItem category={item} key={index}
-            onCategoryPress={(category) => console.log(category)}
+            // onCategoryPress={(category) => console.log(category)}
+            onCategoryPress={(category) => router.push(`/businessList/${item.name}`)}
+
           />
         )}
       />
